@@ -1,14 +1,16 @@
+import "./Styles/App.css";
+import SearchBar from "./Components/SearchBar";
 
-import './App.css'
-import SearchBar from './Components/SearchBar'
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = process.env.REACT_APP_API_URL;
+
 
 function App() {
-
   return (
     <>
-      <h1>Testing</h1>
+      <SearchBar></SearchBar>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
