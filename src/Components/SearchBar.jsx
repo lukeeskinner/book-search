@@ -1,6 +1,7 @@
 import "../Styles/SearchBar.css";
 import React, { useState } from "react";
 
+
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState(""); // hook to create query, stores it. Set query updates when input is changed.
 
@@ -16,6 +17,8 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <>
+    <div className="container">
+    <h1 className="header">Google Books API Search</h1>
       <div className="search-bar">
         <input
           className="search-input"
@@ -27,6 +30,7 @@ const SearchBar = ({ onSearch }) => {
         <button onClick={handleSearch} className="search-button">
           Search Books
         </button>
+      </div>
       </div>
     </>
   );
