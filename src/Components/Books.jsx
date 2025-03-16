@@ -1,15 +1,14 @@
 import BookInfo from "./BookInfo";
+import "../Styles/Books.css";
+
 
 const Books = ({books}) => {
     return(
         <div className='book-list'>
-        {(!books || books.length === 0) ? (
-        <p>No books found</p>
-         ) : (
-        books.map((book) => <BookInfo key={book.id} book={book}/>)
-        )}
+        {books.map((book) => <BookInfo key={book.id} book={book}/>)}
+        
         </div>
     );
 };
 
-export default Books;
+export default Books
