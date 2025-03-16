@@ -1,12 +1,12 @@
 
 
 const BookInfo = ({book}) => {
-    const {title, author, image, link} = book.volumeInfo;
+    const {title, authors, imageLinks, previewLink} = book.volumeInfo;
     return (
         <div className='book-card'>
-        <img src={link?.thumbnail} alt={title} />
+        <img src={imageLinks?.thumbnail} alt={title} />
         <h3>{title}</h3>
-        <p>by {author}</p>
+        <p>by {authors?.join(", ")}</p>
         <a href={previewLink} target="_blank" rel="noopener noreferrer">
             View Book
         </a>
